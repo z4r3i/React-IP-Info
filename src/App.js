@@ -69,12 +69,12 @@ function App() {
           value={ip}
           onChange={(e) => setIp(e.target.value)}
           placeholder="Enter IP address"
-          className="p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
           style={{ maxWidth: '300px' }}
         />
         <button
           type="submit"
-          className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition-colors duration-200"
+          className="mt-4 bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-lg transition-colors duration-200"
         >
           Get Info
         </button>
@@ -118,12 +118,14 @@ function App() {
               <p><strong>ASN:</strong> {ipData.connection.asn}</p>
               <p><strong>Timezone:</strong> {ipData.timezone.id} (UTC{ipData.timezone.utc})</p>
               <p><strong>Current Time:</strong> {ipData.timezone.current_time}</p>
+              <p id="right" ><strong>powered by:</strong></p>
+              <p><strong></strong>4tools.ir</p>
             </div>
             {!isExporting && (
               <button
                 id='exportButton'
                 onClick={exportToImage}
-                className="bg-green-500 mt-4 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg mb-4 transition-colors ... duration-200"
+                className="bg-purple-500 mt-4 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-lg mb-4 transition-colors ... duration-200"
               >
                 Export to Image
               </button>
